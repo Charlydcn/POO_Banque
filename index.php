@@ -30,10 +30,7 @@
     echo "<h2>toString compte :</h2>" . $compte1;
     echo "<h2>toString compte :</h2>" . $compte2;
 
-    echo $charlyDucournau->getFirstName();
-    $charlyDucournau->setFirstName("Bernard");
-    echo $charlyDucournau->getFirstName();
-
+    echo $charlyDucournau->getBankAccounts();
 
     ?>
     
