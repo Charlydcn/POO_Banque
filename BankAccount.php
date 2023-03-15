@@ -4,7 +4,7 @@ class BankAccount
 {
 
     private string $_type;
-    private float $_balance;
+    private float $_balance = 0;
     private string $_currency;
     private Holder $_holder;
 
@@ -46,14 +46,17 @@ class BankAccount
     {
         $this->_type = $type;
     }
+    
     public function setBalance ($balance) // A TESTER
     {
         $this->_balance = $balance;
     }
+
     public function setCurrency ($currency) // A TESTER
     {
         $this->_currency = $currency;
     }
+
     public function setHolder ($holder) // A TESTER
     {
         $this->_holder = $holder;
@@ -69,6 +72,11 @@ class BankAccount
     public function Debit($debamount)
     {
         $this->_balance - $debamount;
+    }
+
+    public function BankTransfer() // A FAIRE
+    {
+        //
     }
 
     public function __toString()

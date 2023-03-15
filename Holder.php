@@ -52,14 +52,17 @@ class Holder
     {
         $this->_firstname = $firstname;
     }
+
     public function setLastName ($lastname) // A TESTER
     {
         $this->_lastname = $lastname;
     }
+
     public function setBirthDate ($birthdate) // A TESTER
     {
         $this->_birthdate = $birthdate;
     }
+    
     public function setCity ($city) // A TESTER
     {
         $this->_city = $city;
