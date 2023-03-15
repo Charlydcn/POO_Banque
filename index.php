@@ -7,6 +7,13 @@
     <title>Banque</title>
 </head>
 <body>
+    <h1>BANQUE</h1>
+    <?php
+    
+    $charlyducournau = new Holder("Charly", "Ducournau", new DateTime(2001-08-28), "Strasbourg", $compte1);
+    echo $charlyducournau;
+
+    ?>
     
 </body>
 </html>

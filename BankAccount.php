@@ -39,6 +39,7 @@ class BankAccount
         return $this->_holder;
     }
 
+    // *************************************************************************************************
     // ************************************** MUTATEURS (setters) ************************************** 
 
     public function setType ($type) // A TESTER
@@ -57,7 +58,27 @@ class BankAccount
     {
         $this->_holder = $holder;
     }
+
+    // *************************************************************************************************
+
+    public function Credit($credamount)
+    {
+        $this->_balance + $credamount;
+    }
     
+    public function Debit($debamount)
+    {
+        $this->_balance - $debamount;
+    }
+
+    public function __toString()
+    {
+        return $this->_type . "<br>"
+        . $this->_balance . "<br>"
+        . $this->_currency . "<br>"
+        . $this->_holder . "<br>";
+    }
+
 }
 
 ?>
