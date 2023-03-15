@@ -19,11 +19,24 @@
         include $class_name . ".php";
     });
 
-    $charlyducournau = new Holder("Charly", "Ducournau", "2001-08-28", "Strasbourg");
-    $compte1 = new BankAccount("Compte courant", "€ EUROS", $charlyducournau);
+    $charlyDucournau = new Holder("Charly", "Ducournau", "2001-08-28", "Strasbourg");
+    $compte1 = new BankAccount("Compte courant", "€ EUROS", $charlyDucournau);
 
-    echo "<h2>toString titulaire :</h2>" . $charlyducournau;
+    $johnDoe = new Holder("John", "Doe", "1995-07-01", "Washington DC");
+    $compte2 = new BankAccount("Compte courant", "€ EUROS", $johnDoe);
+
+    echo "<h2>toString titulaire :</h2>" . $charlyDucournau;
+    echo "<h2>toString titulaire :</h2>" . $johnDoe;
     echo "<h2>toString compte :</h2>" . $compte1;
+    echo "<h2>toString compte :</h2>" . $compte2;
+
+    // TESTS DEBIT & CREDIT
+    
+    // echo "<br>" . $compte1->getBalance();
+    // echo "<br>" . $compte1->Credit(150);
+    // echo $compte1->getBalance();
+    // echo "<br>" . $compte1->Debit(100);
+    // echo $compte1->getBalance();
 
     ?>
     

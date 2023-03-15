@@ -65,17 +65,17 @@ class BankAccount
 
     // *************************************************************************************************
 
-    public function Credit($credamount)
+    public function Credit($credAmount) // CHECK
     {
-        $this->_balance + $credamount;
+        $this->_balance += $credAmount;
     }
     
-    public function Debit($debamount)
+    public function Debit($debAmount) // CHECK
     {
-        $this->_balance - $debamount;
+        $this->_balance -= $debAmount;
     }
 
-    public function BankTransfer() // A FAIRE
+    public function bankTransfer() // A FAIRE
     {
         //
     }
