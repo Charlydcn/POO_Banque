@@ -53,7 +53,7 @@ class Holder
     public function getAge() {
         $now = new DateTime();
         $diff = $this->_birthDate->diff($now);
-        return $diff->y." ans";
+        return $diff->y." years old";
     }
 
     // *************************************************************************************************
@@ -95,7 +95,7 @@ class Holder
     {
         return "<strong>Last name : </strong>" . $this->_lastName . "<br>"
         . "<strong>First name : </strong>" . $this->_firstName . "<br>"
-        . "<strong>Age : </strong>". $this->getAge() . "<br>" // J'utilise ici le getBirthDate et non directement le _birthDate pour assurer la conversion en string du DateTime
+        . "<strong>Age : </strong>". $this->getAge() . "<br>" // J'utilise ici le getAge pour obtenir l'âge et non la date de naissance
         . "<strong>City : </strong>". $this->_city . "<br>"
         . "<strong>Bank Accounts : </strong>" . $this->getBankAccounts(); // J'utilise ici le getBankAccounts et non directement le _bankAccounts pour ne pas convertir un tableau en string
     }
