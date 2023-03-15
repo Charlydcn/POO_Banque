@@ -8,11 +8,11 @@ class Holder
     private string $_city;
     private array $_bankaccounts = [];
 
-    public function __construct(string $firstname, string $lastname, DateTime $birthdate, string $city, array $bankaccounts)
+    public function __construct(string $firstname, string $lastname, string $birthdate, string $city, array $bankaccounts)
     {
         $this->_firstname = $firstname;
         $this->_lastname = $lastname;
-        $this->_birthdate = $birthdate;
+        $this->_birthdate = new DateTime($birthdate);
         $this->_city = $city;
         $this->_bankaccounts = [];
     }
@@ -32,7 +32,7 @@ class Holder
 
     public function getBirthDate () // A TESTER
     {
-        return $this->_birthdate;
+        return $this->_birthdate->format("Y-m-d");
     }
 
     public function getCity () // A TESTER
@@ -79,9 +79,9 @@ class Holder
     {
         return $this->_firstname . "<br>"
         . $this->_lastname . "<br>"
-        . $this->_birthdate . "<br>"
-        . $this->_city . "<br>"
-        . $this->_bankaccounts;
+        . $this->getBirthDate() . "<br>"
+        . $this->_city . "<br>";
+        // . $this->_bankaccounts;
     }
 
     public function addBankAccount(BankAccount $bankaccount)

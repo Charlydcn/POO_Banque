@@ -46,7 +46,7 @@ class BankAccount
     {
         $this->_type = $type;
     }
-    
+
     public function setBalance ($balance) // A TESTER
     {
         $this->_balance = $balance;
@@ -81,10 +81,10 @@ class BankAccount
 
     public function __toString()
     {
-        return $this->_type . "<br>"
-        . $this->_balance . "<br>"
-        . $this->_currency . "<br>"
-        . $this->_holder . "<br>";
+        return "Account type : " . $this->_type . "<br>"
+        . "Balance : " . $this->_balance . "<br>"
+        . "Currency : " . $this->_currency . "<br>"
+        . "<h3>Account holder :</h3>" . $this->_holder . "<br>";
     }
 
 }
