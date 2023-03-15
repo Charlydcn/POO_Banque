@@ -19,18 +19,18 @@
         include $class_name . ".php";
     });
 
-    $charlyDucournau = new Holder("Charly", "Ducournau", "2001-08-28", "Strasbourg");
-    $compte1 = new BankAccount("Compte courant", "€ EUROS", $charlyDucournau);
+    $charlyDucournau = new Holder("Charly", "Ducournau", "2001-08-28", "Strasbourg"); // J'instancie un nouveau titulaire (Holder) avec les 4 propriétés attendues
+    $compte1 = new BankAccount("Compte courant", "€ EUROS", $charlyDucournau); // J'instancie un nouveau compte banciare (BankAccount) avec les 3 propriétés attendues
 
-    $johnDoe = new Holder("John", "Doe", "1995-07-01", "Washington DC");
-    $compte2 = new BankAccount("Compte courant", "€ EUROS", $johnDoe);
+    $johnDoe = new Holder("John", "Doe", "1995-07-01", "Washington DC"); // J'instancie un nouveau titulaire (Holder) avec les 4 propriétés attendues
+    $compte2 = new BankAccount("Compte courant", "€ EUROS", $johnDoe); // J'instancie un nouveau compte banciare (BankAccount) avec les 3 propriétés attendues
 
-    echo "<h2>toString titulaire :</h2>" . $charlyDucournau;
-    echo "<h2>toString titulaire :</h2>" . $johnDoe;
-    echo "<h2>toString compte :</h2>" . $compte1;
-    echo "<h2>toString compte :</h2>" . $compte2;
+    echo "<h2>Titulaire 1 :</h2>" . $charlyDucournau;
+    echo "<h2>Titulaire 2 :</h2>" . $johnDoe;
+    echo "<h2>Compte 1 :</h2>" . $compte1;
+    echo "<h2>Compte 2 :</h2>" . $compte2;
 
-    echo $charlyDucournau->getBankAccounts();
+
 
     ?>
     
