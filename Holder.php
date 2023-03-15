@@ -30,14 +30,19 @@ class Holder
         return $this->_lastname;
     }
 
-    public function getCurrency () // A TESTER
+    public function getBirthDate () // A TESTER
     {
         return $this->_birthdate;
     }
 
-    public function getHolder () // A TESTER
+    public function getCity () // A TESTER
     {
         return $this->_city;
+    }
+
+    public function getBankAccounts () // A TESTER
+    {
+        return $this->_bankaccounts;
     }
 
     // *************************************************************************************************
@@ -51,16 +56,30 @@ class Holder
     {
         $this->_lastname = $lastname;
     }
-    public function setCurrency ($birthdate) // A TESTER
+    public function setBirthDate ($birthdate) // A TESTER
     {
         $this->_birthdate = $birthdate;
     }
-    public function setHolder ($city) // A TESTER
+    public function setCity ($city) // A TESTER
     {
         $this->_city = $city;
     }
 
+    public function setBankAccounts ($bankaccount) // A FAIRE
+    {
+        //
+    }
+
     // *************************************************************************************************
+
+    public function __toString()
+    {
+        return $this->_firstname . "<br>"
+        . $this->_lastname . "<br>"
+        . $this->_birthdate . "<br>"
+        . $this->_city . "<br>"
+        . $this->_bankaccounts;
+    }
 
     public function addBankAccount(BankAccount $bankaccount)
     {
