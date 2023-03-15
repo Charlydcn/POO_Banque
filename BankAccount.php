@@ -75,9 +75,10 @@ class BankAccount
         $this->_balance -= $debAmount;
     }
 
-    public function bankTransfer() // A FAIRE
+    public function bankTransfer($transferAmount, $recipient) // CHECK
     {
-        //
+        $this->debit($transferAmount);
+        $recipient->credit($transferAmount);
     }
 
     public function __toString()
