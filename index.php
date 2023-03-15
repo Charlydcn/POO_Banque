@@ -30,29 +30,10 @@
     echo "<h2>toString compte :</h2>" . $compte1;
     echo "<h2>toString compte :</h2>" . $compte2;
 
-    // TESTS DEBIT & CREDIT
+    echo $charlyDucournau->getFirstName();
+    $charlyDucournau->setFirstName("Bernard");
+    echo $charlyDucournau->getFirstName();
 
-    // echo "<br>" . $compte1->getBalance();
-    // echo "<br>" . $compte1->Credit(150);
-    // echo $compte1->getBalance();
-    // echo "<br>" . $compte1->Debit(150);
-    // echo $compte1->getBalance();
-
-    // echo "<br>" . $compte2->getBalance();
-    // echo "<br>" . $compte2->Credit(150);
-    // echo $compte2->getBalance();
-    // echo "<br>" . $compte2->Debit(150);
-    // echo $compte2->getBalance();
-
-    // TEST TRANSFERT
-
-    // echo "<br> Solde compte 1<br>" . $compte1->getBalance() . " €<br>";
-    // echo "Solde compte 2 <br>" . $compte2->getBalance() . " €<br>";
-
-    // $compte1->bankTransfer(50, $compte2);
-
-    // echo "Solde compte 1 <br>" . $compte1->getBalance() . " €<br>";
-    // echo "Solde compte 2 <br>" . $compte2->getBalance() . " €<br>";
 
     ?>
     

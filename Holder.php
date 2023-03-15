@@ -24,27 +24,27 @@ class Holder
      
        $this->_bankAccounts[] = $bankAccount;
     }
-    public function getfirstName () // A TESTER
+    public function getFirstName () // A TESTER
     {
         return $this->_firstName;
     }
 
-    public function getlastName () // A TESTER
+    public function getLastName () // A TESTER
     {
         return $this->_lastName;
     }
 
-    public function getbirthDate () // A TESTER
+    public function getBirthDate () // A TESTER
     {
         return $this->_birthDate->format("Y-m-d");
     }
 
-    public function getcity () // A TESTER
+    public function getCity () // A TESTER
     {
         return $this->_city;
     }
 
-    public function getbankAccounts () // A TESTER
+    public function getBankAccounts () // A TESTER
     {
         $result = "<ul>";
                 foreach ($this->_bankAccounts as $Account) {
@@ -57,29 +57,29 @@ class Holder
     // *************************************************************************************************
     // ************************************** MUTATEURS (setters) ************************************** 
 
-    public function setfirstName ($firstName) // A TESTER
+    public function setFirstName ($firstName) // CHECK
     {
         $this->_firstName = $firstName;
     }
 
-    public function setlastName ($lastName) // A TESTER
+    public function setLastName ($lastName) // CHECK
     {
         $this->_lastName = $lastName;
     }
 
-    public function setbirthDate ($birthDate) // A TESTER
+    public function setBirthDate ($birthDate) // CHECK
     {
-        $this->_birthDate = $birthDate;
+        $this->_birthDate = new DateTime($birthDate);
     }
     
-    public function setcity ($city) // A TESTER
+    public function setCity ($city) // CHECK
     {
         $this->_city = $city;
     }
 
-    public function setbankAccounts ($bankaccount) // A FAIRE
+    public function setBankAccounts (array $bankAccounts) // CHECK
     {
-        //
+        $this->_bankAccounts = $bankAccounts;
     }
 
     // *************************************************************************************************
