@@ -2,32 +2,36 @@
 
 class Holder
 {
-    private string $_firstname;
-    private string $_lastname;
+    private string $_firstName;
+    private string $_lastName;
     private DateTime $_birthdate;
     private string $_city;
-    private array $_bankaccounts = [];
+    private array $_bankAccounts;
 
-    public function __construct(string $firstname, string $lastname, string $birthdate, string $city, array $bankaccounts)
+    public function __construct(string $firstname, string $lastname, string $birthdate, string $city)
     {
-        $this->_firstname = $firstname;
-        $this->_lastname = $lastname;
+        $this->_firstName = $firstname;
+        $this->_lastName = $lastname;
         $this->_birthdate = new DateTime($birthdate);
         $this->_city = $city;
-        $this->_bankaccounts = [];
+        $this->_bankAccounts = [];
     }
 
 // ************************************************ MÉTHODES ************************************************ 
     // ************************************** ACCESSEURS (getters) ************************************** 
-
+    public function addBankAccount(BankAccount $bankAccount)
+    {
+     
+       $this->_bankAccounts[] = $bankAccount;
+    }
     public function getFirstName () // A TESTER
     {
-        return $this->_firstname;
+        return $this->_firstName;
     }
 
     public function getLastname () // A TESTER
     {
-        return $this->_lastname;
+        return $this->_lastName;
     }
 
     public function getBirthDate () // A TESTER
@@ -42,7 +46,12 @@ class Holder
 
     public function getBankAccounts () // A TESTER
     {
-        return $this->_bankaccounts;
+        $result = "<ul>";
+                foreach ($this->_bankAccounts as $account) {
+                    $result .= "<li>" . $account . "</li>";
+                }
+                $result .= "</ul>";
+        return $result;
     }
 
     // *************************************************************************************************
@@ -50,12 +59,12 @@ class Holder
 
     public function setFirstName ($firstname) // A TESTER
     {
-        $this->_firstname = $firstname;
+        $this->_firstName = $firstname;
     }
 
     public function setLastName ($lastname) // A TESTER
     {
-        $this->_lastname = $lastname;
+        $this->_lastName = $lastname;
     }
 
     public function setBirthDate ($birthdate) // A TESTER
@@ -77,17 +86,13 @@ class Holder
 
     public function __toString()
     {
-        return "<strong>Nom : </strong>" . $this->_lastname . "<br>"
-        . "<strong>Prénom : </strong>" . $this->_firstname . "<br>"
+        return "<strong>Nom : </strong>" . $this->_lastName . "<br>"
+        . "<strong>Prénom : </strong>" . $this->_firstName . "<br>"
         . "<strong>Date de naissance : </strong>". $this->getBirthDate() . "<br>"
         . "<strong>Ville : </strong>". $this->_city . "<br>";
-        // . $this->_bankaccounts;
     }
 
-    public function addBankAccount(BankAccount $bankaccount)
-    {
-        $this->_bankaccounts[] = $bankaccount;
-    }
+    
     
 }
 

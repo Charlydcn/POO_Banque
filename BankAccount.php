@@ -4,16 +4,17 @@ class BankAccount
 {
 
     private string $_type;
-    private float $_balance = 0;
+    private float $_balance;
     private string $_currency;
     private Holder $_holder;
 
-    public function __construct(string $type, float $balance, string $currency, Holder $holder)
+    public function __construct(string $type, string $currency, Holder $holder)
     {
         $this->_type = $type;
-        $this->_balance = $balance;
+        $this->_balance =  0;
         $this->_currency = $currency;
         $this->_holder = $holder;
+        $this->_holder->addBankAccount($this);
     }
 
 // ************************************************ MÉTHODES ************************************************ 
@@ -82,11 +83,14 @@ class BankAccount
     public function __toString()
     {
         return "<strong>Account type : </strong>" . $this->_type . "<br>"
-        . "<strong>Balance : </strong>" . $this->_balance . "<br>"
-        . "<strong>Currency : </strong>" . $this->_currency . "<br>"
-        . "<h3>Account holder :</h3>" . $this->_holder . "<br>";
+        . "<strong>Balance : </strong>" . number_format($this->_balance, 2, ",", " ") . " " . $this->_currency . "<br>";
     }
 
+
+    // public function HolderInfos()
+    // {
+    //     return 
+    // }
 }
 
 ?>
