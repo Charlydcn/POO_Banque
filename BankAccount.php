@@ -83,14 +83,10 @@ class BankAccount
     public function __toString()
     {
         return "<strong>Account type : </strong>" . $this->_type . "<br>"
-        . "<strong>Balance : </strong>" . number_format($this->_balance, 2, ",", " ") . " " . $this->_currency . "<br>";
+        . "<strong>Balance : </strong>" . number_format($this->_balance, 2, ",", " ") . " " . $this->_currency . "<br>"
+        . "<strong>Account holder : </strong>" . $this->_holder->getFirstName() . " " . $this->_holder->getLastName();
     }
 
-
-    // public function HolderInfos()
-    // {
-    //     return 
-    // }
 }
 
 ?>

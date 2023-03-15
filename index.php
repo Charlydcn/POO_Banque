@@ -25,9 +25,6 @@
     echo "<h2>toString titulaire :</h2>" . $charlyducournau;
     echo "<h2>toString compte :</h2>" . $compte1;
 
-
-    echo $charlyducournau->getBankAccounts();
-
     ?>
     
 </body>

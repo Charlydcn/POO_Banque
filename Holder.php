@@ -89,7 +89,8 @@ class Holder
         return "<strong>Nom : </strong>" . $this->_lastName . "<br>"
         . "<strong>Prénom : </strong>" . $this->_firstName . "<br>"
         . "<strong>Date de naissance : </strong>". $this->getBirthDate() . "<br>"
-        . "<strong>Ville : </strong>". $this->_city . "<br>";
+        . "<strong>Ville : </strong>". $this->_city . "<br>"
+        . "<strong>Comptes bancaires : </strong>" . $this->getBankAccounts();
     }
 
     
