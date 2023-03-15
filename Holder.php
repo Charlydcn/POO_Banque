@@ -4,11 +4,11 @@ class Holder
 {
     private string $_firstname;
     private string $_lastname;
-    private string $_birthdate;
+    private DateTime $_birthdate;
     private string $_city;
     private array $_bankaccounts = [];
 
-    public function __construct(string $firstname, string $lastname, string $birthdate, string $city, array $bankaccounts)
+    public function __construct(string $firstname, string $lastname, DateTime $birthdate, string $city, array $bankaccounts)
     {
         $this->_firstname = $firstname;
         $this->_lastname = $lastname;
