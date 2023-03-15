@@ -81,9 +81,9 @@ class BankAccount
 
     public function __toString()
     {
-        return "Account type : " . $this->_type . "<br>"
-        . "Balance : " . $this->_balance . "<br>"
-        . "Currency : " . $this->_currency . "<br>"
+        return "<strong>Account type : </strong>" . $this->_type . "<br>"
+        . "<strong>Balance : </strong>" . $this->_balance . "<br>"
+        . "<strong>Currency : </strong>" . $this->_currency . "<br>"
         . "<h3>Account holder :</h3>" . $this->_holder . "<br>";
     }
 

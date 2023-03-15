@@ -77,10 +77,10 @@ class Holder
 
     public function __toString()
     {
-        return $this->_firstname . "<br>"
-        . $this->_lastname . "<br>"
-        . $this->getBirthDate() . "<br>"
-        . $this->_city . "<br>";
+        return "<strong>Nom : </strong>" . $this->_lastname . "<br>"
+        . "<strong>Prénom : </strong>" . $this->_firstname . "<br>"
+        . "<strong>Date de naissance : </strong>". $this->getBirthDate() . "<br>"
+        . "<strong>Ville : </strong>". $this->_city . "<br>";
         // . $this->_bankaccounts;
     }
 
